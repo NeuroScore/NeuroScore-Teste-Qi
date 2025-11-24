@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,191 +7,168 @@
 
     <style>
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
             background-color: #000;
-            color: #fff;
+            color: #0ff;
+            margin: 0;
+            padding: 0;
         }
 
-        /* ========= HEADER ========= */
         header {
             background-color: #000;
-            padding: 40px;
-            text-align: center;
-            border-bottom: 2px solid cyan;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            border-bottom: 2px solid #0ff;
         }
 
         header img {
-            width: 90px;
-            display: block;
-            margin: 0 auto 15px auto;
-            filter: drop-shadow(0 0 8px cyan);
+            height: 70px;
+            filter: drop-shadow(0 0 10px #0ff);
         }
 
         header h1 {
-            color: cyan;
-            font-size: 42px;
-            margin: 0;
-            text-shadow: 0 0 8px cyan;
+            font-size: 2.5rem;
+            text-shadow: 0 0 8px #0ff;
         }
 
-        /* ========= EFEITO NEON ========= */
-        .neon-border {
-            border: 2px solid cyan;
-            box-shadow:
-                0 0 8px cyan,
-                0 0 16px cyan,
-                0 0 30px cyan;
-        }
-
-        /* ========= SEÇÕES ========= */
-        section {
-            padding: 50px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        .produto, .espaco {
-            background-color: #111;
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 50px;
-        }
-
-        /* ========= IMAGENS (60%) ========= */
-        .produto img, 
-        .espaco img {
-            width: 60%;
-            border-radius: 10px;
-            margin: 25px auto;
-            display: block;
-            border: 2px solid cyan;
-            transition: 0.4s ease;
-        }
-
-        /* efeito hover */
-        .produto img:hover,
-        .espaco img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px cyan;
-        }
-
-        /* ========= ANIMAÇÕES AO ROLAR ========= */
-        .scroll-animation {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s ease;
-        }
-
-        .scroll-animation.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* ========= CONTATO ========= */
-        .contato {
-            background-color: #0a0a0a;
-            border-top: 2px solid cyan;
+        .section {
+            padding: 40px 20px;
             text-align: center;
-            padding-bottom: 80px;
+        }
+
+        .images-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .img-box {
+            width: 45%;
+            background-color: #111;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #0ff;
+            box-shadow: 0 0 10px #0ff;
+        }
+
+        .img-box img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .img-box p {
+            margin-top: 10px;
+            color: #0ff;
+            font-size: 1rem;
+            text-shadow: 0 0 5px #0ff;
+        }
+
+        .separator {
+            width: 100%;
+            margin: 60px 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #0ff, transparent);
+        }
+
+        .bengala-img {
+            width: 45%;
+            margin: 0 auto;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 0 12px #0ff;
+            border: 1px solid #0ff;
+        }
+
+        .price-box {
+            margin-top: 20px;
+            padding: 20px;
+            display: inline-block;
+            border: 2px solid #0ff;
+            border-radius: 10px;
+            background: #111;
+            box-shadow: 0 0 10px #0ff;
+        }
+
+        .warning {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #0ff;
+            opacity: 0.8;
         }
 
         footer {
-            text-align: center;
-            border-top: 2px solid cyan;
-            padding: 20px;
+            margin-top: 50px;
             background-color: #000;
-            color: cyan;
+            padding: 30px;
+            text-align: center;
+            color: #0ff;
+            border-top: 2px solid #0ff;
+        }
+
+        a {
+            color: #0ff;
+            text-decoration: none;
         }
     </style>
 </head>
+
 <body>
 
-<header>
-    <img src="ChatGPT Image 24 de nov. de 2025, 13_37_17.png" alt="Logo da marca">
-    <h1>Communication Alliance</h1>
-    <p>Inovação em acessibilidade e tecnologia</p>
-</header>
+    <header>
+        <img src="ChatGPT Image 24 de nov. de 2025, 13_37_17.png" alt="Logo Communication Alliance">
+        <h1>Communication Alliance</h1>
+    </header>
 
+    <div class="section">
+        <h2>Nosso Espaço Físico</h2>
+        <p>Ambiente projetado com modernidade, tecnologia e acessibilidade — tudo dentro da identidade preto e ciano.</p>
 
+        <div class="images-container">
 
-<!-- ==================== 1️⃣ SEÇÃO DO ESPAÇO ==================== -->
-<section class="espaco neon-border scroll-animation">
-    <h2 style="color: cyan; text-align: center;">Nosso Espaço</h2>
+            <div class="img-box">
+                <img src="WhatsApp Image 2025-11-24 at 12.57.44.png">
+                <p>Espaço clean com iluminação ciano, reforçando tecnologia e acessibilidade.</p>
+            </div>
 
-    <img src="WhatsApp Image 2025-11-24 at 12.57.44.png" alt="Espaço 1">
-    <p style="color: cyan; text-align: center;">
-        Nosso espaço utiliza iluminação inteligente em tons preto e ciano, reforçando a identidade tecnológica da marca.
-    </p>
+            <div class="img-box">
+                <img src="WhatsApp Image 2025-11-24 at 12.57.45 (1).png">
+                <p>Ambiente moderno com design voltado para inovação e interação.</p>
+            </div>
 
-    <img src="WhatsApp Image 2025-11-24 at 12.57.45 (1).png" alt="Espaço 2">
-    <p style="color: cyan; text-align: center;">
-        Ambiente moderno e altamente tecnológico projetado para oferecer conforto e inovação aos visitantes.
-    </p>
+            <div class="img-box">
+                <img src="WhatsApp Image 2025-11-24 at 12.58.49.png">
+                <p>Nossa fachada transmite o compromisso com acessibilidade, tecnologia e design futurista.</p>
+            </div>
 
-    <img src="WhatsApp Image 2025-11-24 at 12.58.49.png" alt="Fachada">
-    <p style="color: cyan; text-align: center;">
-        Nossa fachada transmite o compromisso com acessibilidade, tecnologia e design futurista.
-    </p>
-</section>
+        </div>
+    </div>
 
+    <div class="separator"></div>
 
+    <div class="section">
+        <h2>Bengala Inteligente</h2>
+        <p>Nosso novo produto dedicado a pessoas com deficiência visual — tecnologia, segurança e autonomia em um só item.</p>
 
-<!-- ==================== 2️⃣ SEÇÃO DA BENGALA ==================== -->
-<section class="produto neon-border scroll-animation">
-    <h2 style="color: cyan; font-size: 32px;">Bengala Inteligente</h2>
+        <!-- Imagem da Bengala -->
+        <img src="images/bengala.jpg" alt="Bengala Inteligente" class="bengala-img">
 
-    <p>
-        A Bengala Inteligente foi desenvolvida para proporcionar mais segurança, autonomia e acessibilidade para pessoas com deficiência visual.
-        Com sensores de alerta, vibração inteligente e design leve, ela oferece tecnologia e conforto de maneira acessível.
-    </p>
+        <div class="price-box">
+            <h3>Preço: <span style="color:white;">A definir</span></h3>
+            <p class="warning">Só é possível comprar diretamente com a empresa.  
+            O site apenas ilustra o preço e apresenta a marca.</p>
+        </div>
+    </div>
 
-    <ul>
-        <li>Sensores de detecção de obstáculos</li>
-        <li>Alertas por vibração inteligente</li>
-        <li>Material leve e resistente</li>
-        <li>Design ergonômico e confortável</li>
-    </ul>
-
-    <h3 style="color: cyan; margin-top: 30px;">
-        Preço: <span style="color: white;">A definir</span>
-    </h3>
-
-    <img src="bengala.png" alt="Imagem da Bengala Inteligente">
-</section>
-
-
-
-<!-- ==================== CONTATO ==================== -->
-<section class="contato scroll-animation">
-    <h2 style="color: cyan;">Contato</h2>
-    <p>Email: <a href="mailto:boninvestidor@gmail.com">boninvestidor@gmail.com</a></p>
-    <p>WhatsApp: <a href="https://wa.me/5511917655256">(11) 91765-5256</a></p>
-</section>
-
-<footer>
-    Communication Alliance © 2025 — Todos os direitos reservados.
-</footer>
-
-<!-- SCRIPT PARA ANIMAÇÃO AO ROLAR A PÁGINA -->
-<script>
-    const elements = document.querySelectorAll('.scroll-animation');
-
-    function checkAnimation() {
-        const triggerBottom = window.innerHeight * 0.85;
-
-        elements.forEach(el => {
-            const boxTop = el.getBoundingClientRect().top;
-
-            if (boxTop < triggerBottom) {
-                el.classList.add('visible');
-            }
-        });
-    }
-
-    window.addEventListener('scroll', checkAnimation);
-    window.addEventListener('load', checkAnimation);
-</script>
+    <footer>
+        <h3>Contato</h3>
+        <p>Email: <a href="mailto:boninvestidor@gmail.com">boninvestidor@gmail.com</a></p>
+        <p>Telefone: <a href="tel:+5511917655256">11 91765-5256</a></p>
+    </footer>
 
 </body>
 </html>

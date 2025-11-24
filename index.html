@@ -1,72 +1,131 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Communication Alliance - Bengala Inteligente</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #000000; /* Preto */
-            color: #00e5ff; /* Ciano */
-        }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Communication Alliance — Bengala Inteligente</title>
+  <style>
+    :root{
+      --bg:#000000; /* preto */
+      --accent:#00e5ff; /* ciano */
+      --muted:#bfeff6;
+      --card:#0a0a0a;
+      --radius:14px;
+      --max-width:1100px;
+      --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--muted);
+      font-family:Inter, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
 
-        header {
-            text-align: center;
-            padding: 80px 20px;
-            background-color: #000000;
-        }
+    .container{max-width:var(--max-width);margin:0 auto;padding:28px}
 
-        h1 {
-            font-size: 3rem;
-            margin: 0;
-            color: #00e5ff;
-        }
+    header{
+      padding:36px 0 22px;
+      border-bottom:1px solid rgba(255,255,255,0.04);
+      background:linear-gradient(0deg, rgba(255,255,255,0.01), transparent);
+    }
+    .brand{
+      display:flex;align-items:center;gap:14px;
+    }
+    .logo{
+      width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#00bcd4);
+      display:grid;place-items:center;color:#001; font-weight:700; font-size:18px;
+      box-shadow:0 6px 18px rgba(0,229,255,0.06), inset 0 -2px 6px rgba(0,0,0,0.25);
+    }
+    .brand h1{margin:0;color:var(--accent);font-size:28px}
+    .brand p{margin:0;color:var(--muted);opacity:0.9}
 
-        .section {
-            padding: 60px 20px;
-            max-width: 900px;
-            margin: auto;
-            text-align: center;
-        }
+    .hero{
+      display:flex;gap:36px;align-items:center;justify-content:space-between;padding:48px 0;
+      flex-wrap:wrap;
+    }
+    .hero .left{flex:1 1 420px}
+    .hero h2{color:var(--accent);font-size:42px;margin:0 0 12px}
+    .hero p.lead{font-size:18px;color:var(--muted);margin:0 0 20px}
 
-        h2 {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-            color: #00e5ff;
-        }
+    .cta{display:inline-block;background:var(--accent);color:#002;width:auto;padding:12px 20px;border-radius:10px;font-weight:700;text-decoration:none}
+    .cta:hover{transform:translateY(-2px)}
 
-        p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            color: #baf8ff;
-        }
+    .visual{flex:1 1 340px;display:flex;justify-content:center}
+    .visual img{max-width:420px;width:100%;border-radius:12px;box-shadow:0 20px 50px rgba(0,0,0,0.6)}
 
-        .product-box {
-            border: 2px solid #00e5ff;
-            padding: 30px;
-            border-radius: 10px;
-            margin-top: 30px;
-        }
-    </style>
+    /* Product section */
+    .product{
+      margin-top:28px;padding:34px;background:var(--card);border-radius:12px;border:1px solid rgba(0,229,255,0.06);
+      display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;
+    }
+    .product h3{margin:0;color:var(--accent);font-size:26px}
+    .product p{margin-top:12px;color:var(--muted)}
+    .specs{display:flex;gap:12px;margin-top:16px;flex-wrap:wrap}
+    .chip{padding:8px 12px;border-radius:999px;border:1px solid rgba(0,229,255,0.08);background:var(--glass);font-size:14px}
+
+    footer{padding:28px 0 64px;color:rgba(190,239,246,0.7);text-align:center}
+
+    /* Responsivo */
+    @media (max-width:880px){
+      .product{grid-template-columns:1fr}
+      .visual img{max-width:320px}
+      .hero h2{font-size:32px}
+    }
+  </style>
 </head>
 <body>
-
-    <header>
-        <h1>Communication Alliance</h1>
-    </header>
-
-    <section class="section">
-        <h2>Bengala Inteligente</h2>
-        <div class="product-box">
-            <p>
-                A Bengala Inteligente é um dispositivo moderno voltado para pessoas com deficiência visual.
-                Ela utiliza sensores avançados para identificar obstáculos e fornecer alertas por vibração,
-                tornando a locomoção mais segura e independente.
-            </p>
+  <header>
+    <div class="container">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">CA</div>
+        <div>
+          <h1>Comunicação‑Aliança</h1>
+          <p>Uma marca focada em ajudar pessoas com deficiência visual.</p>
         </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="left">
+        <h2 id="hero-title">Bengala Inteligente — mais autonomia, mais segurança</h2>
+        <p class="lead">Um dispositivo pensado para pessoas com deficiência visual: sensores de proximidade, alertas por vibração e conectividade para rotas mais seguras.</p>
+        <a class="cta" href="#produto">Saiba mais</a>
+      </div>
+
+      <div class="visual" aria-hidden="true">
+        <!-- Imagem ilustrativa decorativa -->
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Ilustração futurista tecnológica" />
+      </div>
     </section>
 
+    <section id="produto" class="product" aria-labelledby="produto-title">
+      <div>
+        <h3 id="produto-title">O que é a Bengala Inteligente?</h3>
+        <p>Uma bengala equipada com múltiplos sensores que detectam obstáculos a diferentes alturas, fornece feedback tátil (vibração) e pode se conectar a uma aplicação para rotas e assistência remota. Projetada para ser leve, resistente e discreta.</p>
+
+        <div class="specs" role="list">
+          <div class="chip" role="listitem">Sensores ultrassônicos</div>
+          <div class="chip" role="listitem">Feedback por vibração</div>
+          <div class="chip" role="listitem">Bateria de longa duração</div>
+          <div class="chip" role="listitem">Conectividade Bluetooth</div>
+        </div>
+      </div>
+
+      <div>
+        <img src="/mnt/data/Captura de tela 2025-11-24 125308.png" alt="Foto do produto (placeholder)" style="width:100%;border-radius:10px;object-fit:cover;" />
+      </div>
+    </section>
+
+    <footer>
+      <small>© <strong>Comunicação‑Aliança</strong> — Desenvolvido para demonstração.</small>
+    </footer>
+  </main>
 </body>
 </html>

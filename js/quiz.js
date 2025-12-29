@@ -1,66 +1,95 @@
-// Perguntas do teste
+// ===============================
+// QUIZ DE QI - NÍVEL DIFÍCIL
+// ===============================
+
 const questions = [
   {
-    q: "2, 4, 8, 16, ?",
-    options: ["18", "24", "32", "30"],
-    answer: 2
+    q: "Qual número completa a sequência: 3, 8, 15, 24, ?",
+    options: ["35", "33", "34", "32"],
+    answer: 0 // +5, +7, +9, +11
   },
   {
-    q: "Qual não pertence ao grupo?",
-    options: ["Quadrado", "Círculo", "Triângulo", "Relógio"],
+    q: "Qual opção NÃO segue o mesmo padrão?",
+    options: [
+      "Quadrado → 4 lados",
+      "Triângulo → 3 lados",
+      "Pentágono → 5 lados",
+      "Círculo → 1 lado"
+    ],
     answer: 3
   },
   {
-    q: "Se A > B e B > C, então:",
-    options: ["A > C", "C > A", "A = C"],
+    q: "Se todos os Zorps são Blins e nenhum Blin é Frux, então:",
+    options: [
+      "Alguns Zorps são Frux",
+      "Nenhum Zorp é Frux",
+      "Todos os Frux são Zorps",
+      "Alguns Blins são Frux"
+    ],
+    answer: 1
+  },
+  {
+    q: "Complete a sequência: 1, 4, 9, 16, 25, ?",
+    options: ["30", "35", "36", "49"],
+    answer: 2
+  },
+  {
+    q: "Qual palavra NÃO pertence?",
+    options: ["Eco", "Reflexo", "Sombra", "Espelho"],
+    answer: 2
+  },
+  {
+    q: "Qual valor de X resolve a equação: 2X + 6 = 20?",
+    options: ["6", "7", "8", "5"],
     answer: 0
   },
   {
-    q: "Qual número completa a sequência? 1, 1, 2, 3, 5, ?",
-    options: ["6", "7", "8", "9"],
+    q: "Qual número completa a sequência: 5, 10, 20, 40, ?",
+    options: ["60", "70", "80", "90"],
     answer: 2
   },
   {
-    q: "5 × 6 − 10 = ?",
-    options: ["10", "20", "30", "25"],
+    q: "Se ontem fosse amanhã, hoje seria sexta-feira. Que dia é hoje?",
+    options: ["Segunda", "Terça", "Quarta", "Quinta"],
     answer: 1
   },
   {
-    q: "Qual palavra é diferente?",
-    options: ["Cão", "Gato", "Pássaro", "Mesa"],
-    answer: 3
+    q: "Qual alternativa mantém a mesma relação lógica?",
+    options: [
+      "Pássaro está para ar assim como peixe está para água",
+      "Pássaro está para água assim como peixe está para ar",
+      "Pássaro está para ninho assim como peixe está para lago",
+      "Pássaro está para ovo assim como peixe está para escama"
+    ],
+    answer: 0
   },
   {
-    q: "Qual figura tem mais lados?",
-    options: ["Triângulo", "Quadrado", "Pentágono", "Círculo"],
-    answer: 2
-  },
-  {
-    q: "Qual é o oposto de expandir?",
-    options: ["Crescer", "Diminuir", "Aumentar", "Estender"],
-    answer: 1
-  },
-  {
-    q: "Qual número vem depois? 3, 9, 27, ?",
-    options: ["54", "81", "90", "72"],
-    answer: 1
-  },
-  {
-    q: "Qual não é ferramenta?",
-    options: ["Martelo", "Chave", "Alicate", "Relógio"],
-    answer: 3
+    q: "Qual número completa a sequência: 1, 11, 21, 1211, ?",
+    options: ["111221", "212211", "121121", "112211"],
+    answer: 0
   }
 ];
+
+// ===============================
+// VARIÁVEIS DE CONTROLE
+// ===============================
 
 let index = 0;
 let score = 0;
 let selected = null;
 
+// ===============================
+// ELEMENTOS DO DOM
+// ===============================
+
 const quiz = document.getElementById("quiz-container");
 const progress = document.getElementById("progress-bar");
 const nextBtn = document.getElementById("nextBtn");
 
-// Carrega pergunta
+// ===============================
+// FUNÇÕES
+// ===============================
+
 function loadQuestion() {
   selected = null;
   nextBtn.disabled = true;
@@ -68,6 +97,7 @@ function loadQuestion() {
   progress.style.width = `${(index / questions.length) * 100}%`;
 
   const q = questions[index];
+
   quiz.innerHTML = `
     <div class="question">${q.q}</div>
     ${q.options
@@ -79,7 +109,6 @@ function loadQuestion() {
   `;
 }
 
-// Selecionar alternativa
 function selectOption(i, el) {
   selected = i;
   nextBtn.disabled = false;
@@ -91,7 +120,6 @@ function selectOption(i, el) {
   el.style.background = "#00ff99";
 }
 
-// Próxima pergunta
 function nextQuestion() {
   if (selected === null) return;
 
@@ -109,5 +137,9 @@ function nextQuestion() {
   }
 }
 
-// Inicia o teste
+// ===============================
+// INICIAR QUIZ
+// ===============================
+
 loadQuestion();
+

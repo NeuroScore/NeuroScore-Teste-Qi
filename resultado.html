@@ -13,7 +13,7 @@
   <p id="resultado"></p>
 
   <div class="box">
-    <h3>Análise Cognitiva</h3>
+    <h3>Análise Cognitiva Completa</h3>
     <p id="analise"></p>
   </div>
 
@@ -34,17 +34,29 @@
     QI estimado: <b>${qi}</b>
   `;
 
-  // Análise cognitiva completa (sempre gratuita)
+  // Análise cognitiva detalhada
   let texto = "";
 
   if (qi >= 130) {
-    texto = "Perfil cognitivo muito acima da média. Raciocínio lógico e abstração avançados.";
+    texto = `Seu perfil cognitivo indica uma inteligência muito acima da média. Você apresenta habilidades excepcionais em raciocínio lógico, 
+    resolução de problemas complexos e pensamento abstrato. Sua memória de trabalho e capacidade de análise são elevadas, permitindo 
+    que você identifique padrões rapidamente e encontre soluções criativas para desafios complicados. Este é um excelente momento 
+    para se dedicar a atividades que estimulem sua mente, como estudos avançados, quebra-cabeças complexos e projetos de alta exigência intelectual.`;
   } else if (qi >= 115) {
-    texto = "Excelente capacidade de análise e reconhecimento de padrões complexos.";
+    texto = `Você possui uma capacidade cognitiva acima da média. Seu raciocínio lógico e habilidades analíticas são fortes, permitindo 
+    que você compreenda informações complexas com facilidade. Sua memória é confiável, e você consegue aplicar conhecimento prévio 
+    de forma prática. Continue desafiando sua mente com exercícios de lógica, leituras avançadas e atividades que estimulem criatividade 
+    e pensamento crítico para alcançar todo o seu potencial.`;
   } else if (qi >= 100) {
-    texto = "Raciocínio lógico consistente, dentro da média superior.";
+    texto = `Seu QI indica habilidades cognitivas dentro da média superior. Você apresenta bom raciocínio lógico, memória funcional e 
+    capacidade de concentração consistente. É provável que você consiga resolver problemas cotidianos de forma eficiente e compreender 
+    conceitos intermediários com facilidade. Para melhorar ainda mais, pratique exercícios que desafiem sua memória, atenção e lógica, 
+    incorporando novas estratégias de aprendizado.`;
   } else {
-    texto = "Capacidade cognitiva funcional, com espaço claro para evolução.";
+    texto = `Sua avaliação indica um potencial cognitivo funcional, com espaço claro para desenvolvimento. Isso não significa incapacidade, 
+    mas sim uma oportunidade de aprimorar suas habilidades. Trabalhar em exercícios de memória, raciocínio lógico, atenção e resolução 
+    de problemas ajudará a elevar sua capacidade mental. O aprendizado contínuo e desafios diários são fundamentais para estimular 
+    a plasticidade cerebral e melhorar seu desempenho cognitivo ao longo do tempo.`;
   }
 
   analise.textContent = texto;

@@ -6,7 +6,7 @@ const questions = [
     answer: 2
   },
   {
-    q: "Qual não pertence?",
+    q: "Qual não pertence ao grupo?",
     options: ["Quadrado", "Círculo", "Triângulo", "Relógio"],
     answer: 3
   },
@@ -14,6 +14,41 @@ const questions = [
     q: "Se A > B e B > C, então:",
     options: ["A > C", "C > A", "A = C"],
     answer: 0
+  },
+  {
+    q: "Qual número completa a sequência? 1, 1, 2, 3, 5, ?",
+    options: ["6", "7", "8", "9"],
+    answer: 2
+  },
+  {
+    q: "5 × 6 − 10 = ?",
+    options: ["10", "20", "30", "25"],
+    answer: 1
+  },
+  {
+    q: "Qual palavra é diferente?",
+    options: ["Cão", "Gato", "Pássaro", "Mesa"],
+    answer: 3
+  },
+  {
+    q: "Qual figura tem mais lados?",
+    options: ["Triângulo", "Quadrado", "Pentágono", "Círculo"],
+    answer: 2
+  },
+  {
+    q: "Qual é o oposto de expandir?",
+    options: ["Crescer", "Diminuir", "Aumentar", "Estender"],
+    answer: 1
+  },
+  {
+    q: "Qual número vem depois? 3, 9, 27, ?",
+    options: ["54", "81", "90", "72"],
+    answer: 1
+  },
+  {
+    q: "Qual não é ferramenta?",
+    options: ["Martelo", "Chave", "Alicate", "Relógio"],
+    answer: 3
   }
 ];
 
